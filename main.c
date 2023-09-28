@@ -281,6 +281,13 @@ void displayResultsToFile()
 
 int main()
 {
+    int choice;
+	char username[50] = "admin", password[50] = "password", get_username[50], get_password[50];
+	printf("Enter your username: ");
+	gets(get_username);
+	printf("Enter your password: ");
+	gets(get_password);
+	if((strcmp(username, get_username) == 0 && strcmp(password, get_password) == 0)){
     while (1)
     {
         int userChoice;
@@ -308,6 +315,7 @@ int main()
             printf("Invalid choice.\n");
             break;
         }
+    }
     }
 
     return 0;
